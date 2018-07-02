@@ -1,0 +1,33 @@
+{
+  "name": "clip-cli",
+  "version": "1.0.0",
+  "description": "基于node的脚手架工具",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "clip": "node ./bin/clip.js init ceshi"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LuSuguru/clip-cli.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/LuSuguru/clip-cli/issues"
+  },
+  "bin": {
+    "clip": "./bin/clip.js"
+  },
+  "homepage": "https://github.com/LuSuguru/clip-cli#readme",
+  "dependencies": {
+    "chalk": "^2.4.1",
+    "commander": "^2.16.0",
+    "download-git-repo": "^1.0.2",
+    "glob": "^7.1.2",
+    "handlebars": "^4.0.11",
+    "inquirer": "^6.0.0",
+    "log-symbols": "^2.2.0",
+    "ora": "^2.1.0"
+  }
+}
