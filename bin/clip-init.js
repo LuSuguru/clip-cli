@@ -71,7 +71,7 @@ function go() {
           .then(answers => ({ ...context, metadata: { ...answers } }))
           .catch(err => Promise.reject(err))
       })
-      .then(({ metadata, target }) => generator(metadata, target, target))
+      .then(({ metadata, target }) => generator(metadata, target, path.parse(target).dir))
       .then(context => console.log('创建成功'))
       .catch(err => console.log(`创建失败：${err.message}`))
   })
