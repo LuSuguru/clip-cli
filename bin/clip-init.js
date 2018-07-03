@@ -41,7 +41,7 @@ if (list.length) {
     type: 'confirm',
     default: true
   }]).then(answer => {
-    return new Promise.resolve(answer.buildInCurrent ? '.' : projectName)
+    return Promise.resolve(answer.buildInCurrent ? '.' : projectName)
   })
 
 } else {
