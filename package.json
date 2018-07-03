@@ -9,7 +9,7 @@
   "bin": {
     "clip": "./bin/clip.js"
   },
-  "author": "lujie <lujie@51xianqu.net>",
+  "author": "LuSuguru <429150413@qq.com>",
   "license": "MIT",
   "dependencies": {
     "chalk": "^2.4.1",
