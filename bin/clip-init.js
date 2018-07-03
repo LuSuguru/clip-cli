@@ -4,6 +4,9 @@ const path = require('path')
 const fs = require('fs')
 const glob = require('glob')
 const inquirer = require('inquirer')
+const chalk = require('chalk')
+const logSymbols = require('log-symbols')
+
 const download = require('../lib/download')
 const generator = require('../lib/generator')
 
@@ -72,7 +75,12 @@ function go() {
           .catch(err => Promise.reject(err))
       })
       .then(({ metadata, target }) => generator(metadata, target, path.parse(target).dir))
-      .then(context => console.log('创建成功'))
-      .catch(err => console.log(`创建失败：${err.message}`))
+      .then(context => {
+        console.log(logSymbols.success, chalk.green('创建成功'))
+        console.log(chalk.green(`   cd ${projectName}\n   yarn or npm install\n   npm run start or yarn start`))
+      })
+      .catch(err => {
+        console.log(logSymbols.error, chalk.red(`创建失败：${err.message}`))
+      })
   })
 }
